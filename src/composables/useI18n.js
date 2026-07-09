@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue';
 
 // Reactive global locale state ('vi' or 'en')
-const currentLocale = ref(localStorage.getItem('locale') || 'vi');
+const currentLocale = ref(localStorage.getItem('locale') || 'en');
 
 const translations = {
   vi: {
