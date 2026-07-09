@@ -317,10 +317,10 @@ const filteredProjects = computed(() => {
 }
 
 .filter-btn.active {
-  background: #ffffff;
-  color: #000000;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-tertiary));
+  color: #ffffff;
   border-color: transparent;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 /* Projects Grid */
@@ -365,7 +365,7 @@ const filteredProjects = computed(() => {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--glass-border);
-  color: #ffffff;
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,10 +374,10 @@ const filteredProjects = computed(() => {
 }
 
 .domain-link:hover {
-  background: #ffffff;
-  color: #000000;
+  background: var(--color-primary);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
 }
 
 /* Card Tabs */
@@ -505,7 +505,7 @@ const filteredProjects = computed(() => {
 
 .tech-detail-title {
   font-size: 0.85rem;
-  color: #ffffff;
+  color: var(--color-secondary);
   font-weight: 600;
   margin-bottom: 0.4rem;
   display: flex;
@@ -557,7 +557,7 @@ const filteredProjects = computed(() => {
   position: absolute;
   left: 0;
   top: 0;
-  color: #ffffff;
+  color: var(--color-primary);
 }
 
 /* Animations */

@@ -56,8 +56,8 @@ const localizedCategories = computed(() => {
     {
       name: isVi ? 'Lập trình Backend' : 'Backend Development',
       icon: 'fa-solid fa-server',
-      color: '#ffffff', // White
-      bg: 'rgba(255, 255, 255, 0.08)',
+      color: '#10b981', // Emerald Green
+      bg: 'rgba(16, 185, 129, 0.1)',
       skills: [
         { name: 'PHP (Laravel / Yii2)', level: 90 },
         { name: 'Node.js (NestJS / Express)', level: 85 },
@@ -68,8 +68,8 @@ const localizedCategories = computed(() => {
     {
       name: isVi ? 'Lập trình Frontend' : 'Frontend Development',
       icon: 'fa-solid fa-code',
-      color: '#e5e5e5', // Light Silver
-      bg: 'rgba(255, 255, 255, 0.05)',
+      color: '#06b6d4', // Cyan
+      bg: 'rgba(6, 182, 212, 0.1)',
       skills: [
         { name: 'Vue.js 3 (Composition API)', level: 80 },
         { name: 'JavaScript / TypeScript', level: 85 },
@@ -80,8 +80,8 @@ const localizedCategories = computed(() => {
     {
       name: isVi ? 'Cơ sở dữ liệu & Caching' : 'Databases & Caching',
       icon: 'fa-solid fa-database',
-      color: '#cccccc', // Silver
-      bg: 'rgba(255, 255, 255, 0.08)',
+      color: '#6366f1', // Indigo
+      bg: 'rgba(99, 102, 241, 0.1)',
       skills: [
         { name: 'MySQL (Query Tuning & Indexes)', level: 85 },
         { name: 'MongoDB (NoSQL)', level: 80 },
@@ -92,8 +92,8 @@ const localizedCategories = computed(() => {
     {
       name: isVi ? 'DevOps & Hạ tầng' : 'DevOps & Infrastructure',
       icon: 'fa-solid fa-gears',
-      color: '#a3a3a3', // Gray
-      bg: 'rgba(255, 255, 255, 0.05)',
+      color: '#0ea5e9', // Sky Blue
+      bg: 'rgba(14, 165, 233, 0.1)',
       skills: [
         { name: 'Git / GitHub / GitLab', level: 90 },
         { name: 'Docker Containerization', level: 75 },
@@ -136,8 +136,23 @@ const localizedCategories = computed(() => {
 
 .skill-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+}
+
+.skill-card:nth-child(2):hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
+}
+
+.skill-card:nth-child(3):hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+}
+
+.skill-card:nth-child(4):hover {
+  border-color: rgba(14, 165, 233, 0.3);
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.1);
 }
 
 .category-header {

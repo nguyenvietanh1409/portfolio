@@ -21,18 +21,35 @@
         </div>
       </div>
 
-      <!-- Cosmic visual animation (glowing planet & orbits) -->
+      <!-- Professional Code Window Mockup -->
       <div class="hero-visual">
-        <div class="cosmic-sphere">
-          <div class="planet"></div>
-          <div class="orbit orbit-1">
-            <div class="satellite sat-1"></div>
+        <div class="code-window glass-panel">
+          <div class="code-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span class="file-name">developer.json</span>
           </div>
-          <div class="orbit orbit-2">
-            <div class="satellite sat-2"></div>
-          </div>
-          <div class="orbit orbit-3">
-            <div class="satellite sat-3"></div>
+          <div class="code-body">
+            <pre class="code-content"><code>{
+  <span class="code-key">"name"</span>: <span class="code-val">"Nguyễn Việt Anh"</span>,
+  <span class="code-key">"role"</span>: <span class="code-val">"Fullstack Developer"</span>,
+  <span class="code-key">"experience"</span>: <span class="code-val">"3+ Years"</span>,
+  <span class="code-key">"backend"</span>: [
+    <span class="code-val">"PHP (Laravel / Yii2)"</span>,
+    <span class="code-val">"Node.js (NestJS / Express)"</span>
+  ],
+  <span class="code-key">"frontend"</span>: [
+    <span class="code-val">"VueJS 3"</span>,
+    <span class="code-val">"JS / TS"</span>
+  ],
+  <span class="code-key">"devops"</span>: [
+    <span class="code-val">"Docker"</span>,
+    <span class="code-val">"Nginx"</span>,
+    <span class="code-val">"Linux"</span>
+  ],
+  <span class="code-key">"availability"</span>: <span class="code-val">"Open to new challenges"</span>
+}</code></pre>
           </div>
         </div>
       </div>
@@ -159,78 +176,70 @@ const scrollToSection = (e, id) => {
   align-items: center;
 }
 
-.cosmic-sphere {
-  position: relative;
-  width: 300px;
-  height: 300px;
+/* Code Window Mockup */
+.code-window {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(11, 15, 25, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(16, 185, 129, 0.05);
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  transition: var(--transition-smooth);
+}
+
+.code-window:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6), 0 0 50px rgba(6, 182, 212, 0.15);
+}
+
+.code-header {
+  background: rgba(3, 7, 18, 0.5);
+  padding: 10px 16px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.planet {
-  width: 100px;
-  height: 100px;
+.code-dot {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #525252 70%, #000000 100%);
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2), inset -10px -10px 30px rgba(0, 0, 0, 0.9);
-  z-index: 5;
-  animation: float 6s infinite ease-in-out;
+  display: inline-block;
 }
 
-.orbit {
-  position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotateX(75deg);
-  transform-style: preserve-3d;
+.code-dot.red { background: #ef4444; }
+.code-dot.yellow { background: #f59e0b; }
+.code-dot.green { background: #10b981; }
+
+.file-name {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
 }
 
-.orbit-1 {
-  width: 180px;
-  height: 180px;
-  animation: spin 10s linear infinite;
+.code-body {
+  padding: 20px;
+  font-size: 0.85rem;
+  text-align: left;
+  line-height: 1.5;
+  overflow-x: auto;
 }
 
-.orbit-2 {
-  width: 240px;
-  height: 240px;
-  animation: spin 15s linear infinite reverse;
+.code-content {
+  margin: 0;
 }
 
-.orbit-3 {
-  width: 320px;
-  height: 320px;
-  animation: spin 22s linear infinite;
+.code-key {
+  color: #60a5fa; /* Blue */
 }
 
-.satellite {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  transform: translateZ(0);
-}
-
-.sat-1 {
-  background: #ffffff;
-  top: 0;
-  box-shadow: 0 0 10px #ffffff;
-}
-
-.sat-2 {
-  background: #cccccc;
-  left: 0;
-  box-shadow: 0 0 10px #cccccc;
-}
-
-.sat-3 {
-  background: #888888;
-  right: 0;
-  box-shadow: 0 0 10px #888888;
+.code-val {
+  color: #34d399; /* Emerald Green */
 }
 
 /* Stats Dashboard styling */
@@ -254,7 +263,7 @@ const scrollToSection = (e, id) => {
   font-family: var(--font-title);
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #ffffff, #a3a3a3);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

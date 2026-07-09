@@ -168,7 +168,7 @@ onBeforeUnmount(() => {
 
 .navbar-scrolled {
   height: 70px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(3, 7, 18, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--glass-border);
@@ -196,7 +196,7 @@ onBeforeUnmount(() => {
 }
 
 .logo-glow {
-  background: linear-gradient(135deg, #ffffff, #a3a3a3);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
@@ -209,7 +209,7 @@ onBeforeUnmount(() => {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #ffffff, #a3a3a3);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: blur(8px);
@@ -247,7 +247,7 @@ onBeforeUnmount(() => {
   left: 50%;
   width: 0;
   height: 2px;
-  background: #ffffff;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
   transition: var(--transition-smooth);
   transform: translateX(-50%);
 }
@@ -259,7 +259,7 @@ onBeforeUnmount(() => {
 
 .nav-link.active {
   color: var(--color-primary);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.35);
 }
 
 /* Nav Actions */
@@ -307,10 +307,10 @@ onBeforeUnmount(() => {
 }
 
 .btn-cv:hover {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
   transform: translateY(-1px);
 }
 
@@ -355,7 +355,7 @@ onBeforeUnmount(() => {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.98);
+  background: rgba(3, 7, 18, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   display: flex;
@@ -405,13 +405,13 @@ onBeforeUnmount(() => {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff;
-  color: #000000;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  color: #ffffff;
   padding: 12px 30px;
   border-radius: 25px;
   font-family: var(--font-title);
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
 }
 
 /* Responsive */

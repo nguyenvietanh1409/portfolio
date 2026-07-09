@@ -110,7 +110,7 @@ onBeforeUnmount(() => {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: var(--bg-primary);
   overflow: hidden;
   z-index: 1;
   pointer-events: none;
@@ -139,7 +139,7 @@ onBeforeUnmount(() => {
   right: -10%;
   width: 60vw;
   height: 60vw;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0) 70%);
   animation: pulseGlow 15s infinite ease-in-out;
 }
 
@@ -148,7 +148,7 @@ onBeforeUnmount(() => {
   left: -10%;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.06) 0%, rgba(6, 182, 212, 0) 70%);
   animation: pulseGlow 20s infinite ease-in-out;
 }
 </style>

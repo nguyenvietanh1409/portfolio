@@ -114,8 +114,8 @@ const { t } = useI18n();
 .philosophy {
   display: flex;
   gap: 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 3px solid #ffffff;
+  background: rgba(16, 185, 129, 0.03);
+  border-left: 3px solid var(--color-primary);
   padding: 1.25rem;
   border-radius: 0 12px 12px 0;
   margin-top: 1rem;
@@ -123,7 +123,7 @@ const { t } = useI18n();
 
 .quote-icon {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: var(--color-primary);
   opacity: 0.6;
 }
 
@@ -203,14 +203,14 @@ const { t } = useI18n();
 .school {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-secondary);
 }
 
 .period {
   font-size: 0.85rem;
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(16, 185, 129, 0.08);
+  color: var(--color-primary);
+  border: 1px solid rgba(16, 185, 129, 0.15);
   padding: 4px 10px;
   border-radius: 12px;
   font-weight: 600;

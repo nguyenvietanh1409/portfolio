@@ -221,9 +221,9 @@ const resetForm = () => {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,9 +231,9 @@ const resetForm = () => {
 }
 
 .card-info-item:nth-child(2) .info-icon {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.2);
+  color: var(--color-secondary);
 }
 
 .info-details {
@@ -328,9 +328,9 @@ const resetForm = () => {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #ffffff;
+  border-color: var(--color-primary);
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
 }
 
 .btn-submit {

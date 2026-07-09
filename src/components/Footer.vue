@@ -41,7 +41,7 @@
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Nguyễn Việt Anh. {{ t('footer.rights') }} <i class="fa-solid fa-heart" style="color: #ffffff;"></i> for VueJS.</p>
+      <p>&copy; {{ currentYear }} Nguyễn Việt Anh. {{ t('footer.rights') }} <i class="fa-solid fa-heart" style="color: var(--color-primary);"></i> for VueJS.</p>
     </div>
   </footer>
 </template>
@@ -55,7 +55,7 @@ const currentYear = new Date().getFullYear();
 
 <style scoped>
 .footer {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(3, 7, 18, 0.9);
   border-top: 1px solid var(--glass-border);
   padding: 4rem 0 2rem 0;
   position: relative;
@@ -86,7 +86,7 @@ const currentYear = new Date().getFullYear();
 }
 
 .logo-glow {
-  background: linear-gradient(135deg, #ffffff, #a3a3a3);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -144,11 +144,11 @@ const currentYear = new Date().getFullYear();
 }
 
 .social-icon:hover {
-  background: #ffffff;
-  color: #000000;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #ffffff;
   border-color: transparent;
   transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
 }
 
 .footer-bottom {
