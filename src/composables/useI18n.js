@@ -19,7 +19,7 @@ const translations = {
       greeting: '👋 Xin chào, tôi là',
       name: 'Nguyễn Việt Anh',
       role: 'Fullstack Developer',
-      description: 'Chuyên gia phát triển web Fullstack với 3 năm kinh nghiệm thực chiến. Thành thạo PHP (Laravel, Yii2), Node.js (NestJS), VueJS và quản trị cơ sở dữ liệu. Đam mê xây dựng các hệ thống e-learning, e-commerce bền vững và tối ưu hiệu suất chuyên sâu.',
+      description: 'Lập trình viên Fullstack với 3 năm kinh nghiệm thực chiến. Thành thạo PHP (Laravel, Yii2), Node.js (NestJS), VueJS và quản trị cơ sở dữ liệu. Đam mê xây dựng các hệ thống e-learning, e-commerce bền vững và tối ưu hiệu suất chuyên sâu.',
       viewProjects: 'Xem dự án',
       contactMe: 'Liên hệ',
       expYears: 'Năm kinh nghiệm',
