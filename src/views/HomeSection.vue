@@ -2,7 +2,6 @@
   <section id="home" class="hero-section">
     <div class="hero-content">
       <div class="hero-text">
-        <span class="greeting-badge">{{ t('hero.greeting') }}</span>
         <h1 class="hero-title">
           <span class="name">{{ t('hero.name') }}</span>
           <span class="role gradient-text-primary">{{ t('hero.role') }}</span>
