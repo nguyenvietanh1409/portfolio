@@ -303,6 +303,14 @@ const scrollToSection = (e, id) => {
   .hero-text {
     align-items: center;
   }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-title .role {
+    font-size: 2.4rem;
+  }
   
   .hero-visual {
     order: 1; /* Puts code mockup below the text */
@@ -326,15 +334,23 @@ const scrollToSection = (e, id) => {
   .hero-section {
     padding-top: 120px !important;
   }
+  
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  
+  .hero-title .role {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .hero-title .role {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
   }
   
   .hero-cta {
