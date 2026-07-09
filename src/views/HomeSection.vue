@@ -290,6 +290,10 @@ const scrollToSection = (e, id) => {
 
 /* Responsive */
 @media (max-width: 992px) {
+  .hero-section {
+    padding-top: 110px;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -301,7 +305,7 @@ const scrollToSection = (e, id) => {
   }
   
   .hero-visual {
-    order: -1;
+    order: 1; /* Puts code mockup below the text */
   }
   
   .stats-container {
@@ -315,6 +319,12 @@ const scrollToSection = (e, id) => {
   
   .stat-divider {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 120px !important;
   }
 }
 

@@ -239,14 +239,18 @@ const { t } = useI18n();
 
 /* Responsive */
 @media (max-width: 768px) {
+  .timeline {
+    padding: 2rem 0.5rem;
+  }
+
   .timeline-line {
-    left: 20px;
+    left: 16px;
   }
   
   .timeline-item {
     width: 100%;
-    padding-left: 45px;
-    padding-right: 0;
+    padding-left: 36px;
+    padding-right: 0.5rem;
   }
   
   .timeline-item.right {
@@ -254,7 +258,7 @@ const { t } = useI18n();
   }
   
   .timeline-dot {
-    left: 12px !important;
+    left: 8px !important;
   }
   
   .left .timeline-dot {

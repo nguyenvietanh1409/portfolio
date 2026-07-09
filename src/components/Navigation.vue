@@ -364,6 +364,8 @@ onBeforeUnmount(() => {
   transform: translateY(-100%);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 999;
+  padding: 100px 2rem 40px 2rem;
+  overflow-y: auto;
 }
 
 .mobile-menu.open {

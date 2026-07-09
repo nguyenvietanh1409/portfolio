@@ -295,6 +295,7 @@ const filteredProjects = computed(() => {
 .project-filters {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 3rem;
 }
