@@ -234,7 +234,7 @@ const translations = {
       successBtn: 'Gửi tin nhắn mới'
     },
     footer: {
-      desc: 'Fullstack Developer chuyên nghiệp, kiến tạo các giải pháp web bền vững, hiệu năng cao và có thể mở rộng.',
+      desc: 'Fullstack Developer kiến tạo các giải pháp web bền vững, hiệu năng cao và có thể mở rộng.',
       quickLinks: 'Liên kết nhanh',
       contactSocials: 'Liên hệ & Mạng xã hội',
       rights: 'Đã đăng ký toàn bộ quyền. Designed with'
@@ -255,7 +255,7 @@ const translations = {
       greeting: "👋 Hi, I'm",
       name: 'Nguyen Viet Anh',
       role: 'Fullstack Developer',
-      description: 'Professional Fullstack Web Developer with 3 years of hands-on experience. Proficient in PHP (Laravel, Yii2), Node.js (NestJS), VueJS, and database management. Passionate about building sustainable, highly optimized, and high-performance e-learning and e-commerce platforms.',
+      description: 'Fullstack Web Developer with 3 years of hands-on experience. Proficient in PHP (Laravel, Yii2), Node.js (NestJS), VueJS, and database management. Passionate about building sustainable, highly optimized, and high-performance e-learning and e-commerce platforms.',
       viewProjects: 'View Projects',
       contactMe: 'Contact Me',
       expYears: 'Years of Experience',
@@ -470,7 +470,7 @@ const translations = {
       successBtn: 'Send New Message'
     },
     footer: {
-      desc: 'Professional Fullstack Developer building sustainable, high-performance, and scalable web solutions.',
+      desc: 'Fullstack Developer building sustainable, high-performance, and scalable web solutions.',
       quickLinks: 'Quick Links',
       contactSocials: 'Connect With Me',
       rights: 'All rights reserved. Designed with'
