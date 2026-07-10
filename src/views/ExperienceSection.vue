@@ -258,7 +258,7 @@ const { t } = useI18n();
   }
   
   .timeline-dot {
-    left: 8px !important;
+    left: 0 !important;
   }
   
   .left .timeline-dot {

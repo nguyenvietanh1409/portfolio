@@ -227,6 +227,8 @@ const translations = {
       formMsg: 'Nội dung tin nhắn',
       formMsgPlaceholder: 'Bạn muốn nhắn gì cho tôi...',
       formSubmit: 'Gửi tin nhắn',
+      formSending: 'Đang gửi...',
+      formError: 'Đã có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau!',
       successTitle: 'Gửi tin nhắn thành công!',
       successDesc: 'Cảm ơn bạn đã liên hệ. Tôi đã nhận được tin nhắn và sẽ phản hồi lại bạn sớm nhất có thể qua Email.',
       successBtn: 'Gửi tin nhắn mới'
@@ -461,6 +463,8 @@ const translations = {
       formMsg: 'Message Content',
       formMsgPlaceholder: 'Type your message here...',
       formSubmit: 'Send Message',
+      formSending: 'Sending...',
+      formError: 'An error occurred while sending your message. Please try again later!',
       successTitle: 'Sent Successfully!',
       successDesc: 'Thank you for reaching out! I have received your message and will respond to your email as soon as possible.',
       successBtn: 'Send New Message'

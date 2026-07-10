@@ -76,6 +76,7 @@
               id="name" 
               v-model="form.name" 
               required 
+              :disabled="isSending"
               :placeholder="t('contact.formNamePlaceholder')"
             />
           </div>
@@ -87,6 +88,7 @@
               id="email" 
               v-model="form.email" 
               required 
+              :disabled="isSending"
               :placeholder="t('contact.formEmailPlaceholder')"
             />
           </div>
@@ -97,13 +99,23 @@
               id="message" 
               v-model="form.message" 
               required 
+              :disabled="isSending"
               rows="5" 
               :placeholder="t('contact.formMsgPlaceholder')"
             ></textarea>
           </div>
 
-          <button type="submit" class="btn-primary btn-submit">
-            {{ t('contact.formSubmit') }} <i class="fa-solid fa-paper-plane"></i>
+          <div v-if="errorMessage" class="error-message">
+            <i class="fa-solid fa-circle-exclamation"></i> {{ errorMessage }}
+          </div>
+
+          <button type="submit" :disabled="isSending" class="btn-primary btn-submit">
+            <span v-if="isSending" class="btn-content-loading">
+              {{ t('contact.formSending') }} <i class="fa-solid fa-circle-notch fa-spin"></i>
+            </span>
+            <span v-else>
+              {{ t('contact.formSubmit') }} <i class="fa-solid fa-paper-plane"></i>
+            </span>
           </button>
         </form>
 
@@ -135,6 +147,8 @@ const form = reactive({
 
 const isSubmitted = ref(false);
 const copiedType = ref('');
+const isSending = ref(false);
+const errorMessage = ref('');
 
 const copyText = async (text, type) => {
   try {
@@ -148,10 +162,44 @@ const copyText = async (text, type) => {
   }
 };
 
-const handleSubmit = () => {
-  setTimeout(() => {
+const handleSubmit = async () => {
+  isSending.value = true;
+  errorMessage.value = '';
+  try {
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+    
+    if (!supabaseUrl || !supabaseAnonKey) {
+      console.warn('Supabase URL or Anon Key is missing. Check your environment variables.');
+      throw new Error('Supabase configuration missing');
+    }
+    
+    const response = await fetch(`${supabaseUrl}/rest/v1/messages`, {
+      method: 'POST',
+      headers: {
+        'apikey': supabaseAnonKey,
+        'Authorization': `Bearer ${supabaseAnonKey}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        message: form.message
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error('Failed to send message to Supabase');
+    }
+    
     isSubmitted.value = true;
-  }, 800);
+  } catch (err) {
+    console.error('Error sending message:', err);
+    errorMessage.value = t('contact.formError');
+  } finally {
+    isSending.value = false;
+  }
 };
 
 const resetForm = () => {
@@ -159,6 +207,7 @@ const resetForm = () => {
   form.email = '';
   form.message = '';
   isSubmitted.value = false;
+  errorMessage.value = '';
 };
 </script>
 
@@ -379,6 +428,36 @@ const resetForm = () => {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.form-group input:disabled,
+.form-group textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-content-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-message {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Responsive */

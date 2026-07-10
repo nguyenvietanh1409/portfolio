@@ -114,7 +114,7 @@ const scrollToSection = (e, id) => {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   align-items: center;
   gap: 4rem;
   width: 100%;
@@ -125,6 +125,8 @@ const scrollToSection = (e, id) => {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
+  min-width: 0;
+  width: 100%;
 }
 
 .greeting-badge {
@@ -173,12 +175,15 @@ const scrollToSection = (e, id) => {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 0;
+  width: 100%;
 }
 
 /* Code Window Mockup */
 .code-window {
   width: 100%;
   max-width: 440px;
+  min-width: 0;
   background: rgba(11, 15, 25, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -295,13 +300,17 @@ const scrollToSection = (e, id) => {
   }
 
   .hero-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 3rem;
     text-align: center;
   }
   
   .hero-text {
     align-items: center;
+  }
+
+  .hero-description {
+    text-align: center;
   }
 
   .hero-title {
